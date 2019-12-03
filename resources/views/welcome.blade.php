@@ -83,17 +83,14 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    <a href=""><button type="button" class="btn btn-primary">Send Statements</button></a>
+                    <a href="{{url('/statement')}}"><button type="button" class="btn btn-primary">Send Statements</button></a>
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">About Cytonn</a>
-                    <a href="https://laracasts.com">Documentation</a>
-                    <a href="https://laravel-news.com">Help</a>
-                    <a href="https://blog.laravel.com">Report Error</a>
-                    <!-- <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a> -->
+                    <a href="#">About Cytonn</a>
+                    <a href="#">Documentation</a>
+                    <a href="#">Help</a>
+                    <a href="#">Report Error</a>
                 </div>
             </div>
         </div>

@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
     public function transactions(){
-    	return $this->hasMany('App\Transaction','prod_id');
+    	return $this->hasMany('App\Transaction');
     }
 }

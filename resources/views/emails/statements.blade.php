@@ -3,12 +3,6 @@
     <head>
         <meta charset="utf-8">
         <style type="text/css">
-            .logo {
-                width: 190px;
-                height: 120px;
-                display: block;
-                margin: 0 auto;
-            }
 
             body {
                 font-family: Verdana, sans-serif;

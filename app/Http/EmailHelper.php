@@ -28,15 +28,11 @@ class EmailHelper
             'name' => $name,
             'to' => $to,
             'subject' => $subject,
-            'type' => $type,
-            'cc' => 'mike.nyakundi@jubileekenya.com',
-            'cc_name' => 'Mike Nyakundi'
-            // 'bcc' => 'Dennis.Mwirigi@jubileekenya.com', # FOR TESTING
-            // 'bcc_name' => 'Dennis Mwirigi', # FOR TESTING
+            'type' => $type
         ];
         $template = "emails.statements";
         $attach = [
-             'policy_doc' => $docData
+             'stmt' => $docData
         ];
         self::send_email($template, $data, $attach);
     }
@@ -60,8 +56,8 @@ class EmailHelper
             ]);
         } else {
             $data['message'] = $message;
-            $data['from'] = config('app.mail_from_address'); //env('MAIL_FROM_ADDRESS', 'marine@jubileeinsurance.com');
-            $data['from_name'] = config('app.mail_from_name'); //env('MAIL_FROM_NAME', 'Jubilee Insurance');
+            $data['from'] = config('app.mail_from_address');
+            $data['from_name'] = config('app.mail_from_name'); 
             $data['attach'] = $attach;
 
             try {
@@ -77,7 +73,7 @@ class EmailHelper
                     $message->subject($data['subject']);
                     if (!empty($data['attach'])) {
                         if (!empty($data['attach']['policy_doc'])) {
-                            $message->attach($data['attach']['policy_doc'], [
+                            $message->attach($data['attach']['stmt'], [
                                 'mime' => 'application/pdf',
                             ]);
                         }

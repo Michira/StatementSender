@@ -56,8 +56,8 @@ return [
 
     'asset_url' => env('ASSET_URL', null),
 
-    'mail_from_name' => env('MAIL_FROM_NAME', 'noreply@jubileekenya.com'),
-    'mail_from_address' => env('MAIL_FROM_ADDRESS', 'noreply@jubileekenya.com'),
+    'mail_from_name' => env('MAIL_FROM_NAME', 'statement@cytonn.com'),
+    'mail_from_address' => env('MAIL_FROM_ADDRESS', 'statement@cytonn.com'),
 
     /*
     |--------------------------------------------------------------------------
