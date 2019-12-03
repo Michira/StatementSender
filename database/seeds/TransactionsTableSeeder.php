@@ -22,7 +22,7 @@ class TransactionsTableSeeder extends Seeder
     		for ($i=0; $i < 5; $i++) { 
 	    		Transaction::firstOrCreate([
 		            'trans_type' => 'd',
-		            'client_prod_id' => $clientProduct->id,
+		            'prod_id' => $clientProduct->id,
 		            'trans_amount' => rand(1000,200000),
 		            'trans_date' => Carbon::now(),
 		        ]);
@@ -32,7 +32,7 @@ class TransactionsTableSeeder extends Seeder
 	    	for ($i=0; $i < 5; $i++) { 
 	    		Transaction::firstOrCreate([
 		            'trans_type' => 'w',
-		            'client_prod_id' => $clientProduct->id,
+		            'prod_id' => $clientProduct->id,
 		            'trans_amount' => rand(1000,100000),
 		            'trans_date' => Carbon::now(),
 		        ]);

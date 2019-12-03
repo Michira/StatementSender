@@ -15,13 +15,13 @@ class CreateTransactionsTable extends Migration
     {
         Schema::create('transactions', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('client_prod_id');
+            $table->unsignedBigInteger('prod_id');
             $table->enum('trans_type', ['d', 'w']);
             $table->float('trans_amount');
             $table->datetime('trans_date');
             $table->timestamps();
 
-            $table->foreign('client_prod_id')->references('id')->on('client_products')->onDelete('cascade');
+            $table->foreign('prod_id')->references('id')->on('client_products')->onDelete('cascade');
         });
     }
 

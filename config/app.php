@@ -56,6 +56,9 @@ return [
 
     'asset_url' => env('ASSET_URL', null),
 
+    'mail_from_name' => env('MAIL_FROM_NAME', 'noreply@jubileekenya.com'),
+    'mail_from_address' => env('MAIL_FROM_ADDRESS', 'noreply@jubileekenya.com'),
+
     /*
     |--------------------------------------------------------------------------
     | Application Timezone
@@ -175,6 +178,8 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        Barryvdh\DomPDF\ServiceProvider::class,
+
     ],
 
     /*
@@ -225,6 +230,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        'PDF' => Barryvdh\DomPDF\Facade::class,
 
     ],
 
