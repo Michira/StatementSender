@@ -67,6 +67,8 @@ class StatementController extends Controller
                     Log::info("Statement for client ".$client->id." sent successfully");     
                 }
 
+                return view('sent');
+
             } catch (QueryException $e) {
                 $error = $e->getMessage();
                 Log::error('An Exception '.$error.' was encountered');
