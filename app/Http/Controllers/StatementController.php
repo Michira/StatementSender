@@ -10,6 +10,7 @@ use App\Http\Controllers\Controller;
 use PDF;
 use Storage;
 use App\Http\EmailHelper;
+use Illuminate\Support\Facades\Log;
 
 class StatementController extends Controller
 {
